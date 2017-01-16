@@ -10,7 +10,7 @@ export class SelectItem {
     }
 
     if (typeof source === 'object') {
-      this.id = source.id || source.text;
+      this.id = source.id !== null ? source.id : '';
       this.text = source.text;
 
       if (source.children && source.text) {
