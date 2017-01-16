@@ -19,6 +19,7 @@
     "flow.build:dev": "./node_modules/.bin/webpack --progress --color",
     "flow.serve:dev": "./node_modules/.bin/webpack-dev-server --hot --inline --colors --display-error-details --display-cached",
     "flow.serve:prod": "NODE_ENV=production ./node_modules/.bin/webpack-dev-server --hot --inline --colors --display-error-details --display-cached",
+    "preinstall": "npm run flow.install:typings && npm run flow.compile:common",
     "prepublish": "npm run flow.clean && npm run flow.compile",
     "postpublish": "npm run flow.deploy:gh-pages",
     "start": "npm run flow.serve:dev",
